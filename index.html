@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function search() {
+            var searchingString = document.getElementById("textSearch").value;
+            var listitems = document.getElementsByTagName("li");
+            for (var item of listitems) {
+                if (item.textContent.includes(searchingString)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" onkeyup="search()" id="textSearch" placeholder="SearchTopic">
+    <ul>
+        <li>java Script</li>
+        <li>Python</li>
+        <li>.Net</li>
+        <li>HTML Toturiol</li>
+        <li>HTML Project</li>
+        <li>CSS</li>
+        <li>CSS Project</li>
+    </ul>
+
+</body>
+
+</html>
